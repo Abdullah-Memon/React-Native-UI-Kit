@@ -2,8 +2,10 @@
 export const NAV_ROUTES = {
   WELCOME: "/",
   HOME: "/showcase",
-  BUTTONS: "/buttons",
-  TYPOGRAPHY: "/typography",
+  ELEMENTS: {
+    BUTTONS: "/buttons",
+    TYPOGRAPHY: "/typography",
+  },
 };
 
 // Sidebar menu items with support for nested/dropdown items
@@ -21,12 +23,12 @@ export const SIDEBAR_MENU = [
     submenu: [
       {
         label: "Buttons",
-        route: NAV_ROUTES.BUTTONS,
+        route: NAV_ROUTES.ELEMENTS.BUTTONS,
         icon: "🔘",
       },
       {
         label: "Typography",
-        route: NAV_ROUTES.TYPOGRAPHY,
+        route: NAV_ROUTES.ELEMENTS.TYPOGRAPHY,
         icon: "📝",
       },
     ],
