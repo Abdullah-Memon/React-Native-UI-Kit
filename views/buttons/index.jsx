@@ -1,19 +1,11 @@
 import Button from "@/components/btn";
 import Typography from "@/components/form/Typography";
-import SidebarToggleButton from "@/components/sidebar/btn";
 import { COLORS } from "@/contants/colors";
 import { ScrollView, StyleSheet, View } from "react-native";
 
 export default function ButtonsShowcaseScreen() {
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Typography variant="h3" color={COLORS.white}>
-          Button Components
-        </Typography>
-        <SidebarToggleButton variant="primary" type="contained" />
-      </View>
-
       <ScrollView contentContainerStyle={styles.content}>
         <Typography variant="h4" style={styles.section}>
           Variants

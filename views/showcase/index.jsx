@@ -1,6 +1,5 @@
 import Button from "@/components/btn";
 import Typography from "@/components/form/Typography";
-import SidebarToggleButton from "@/components/sidebar/btn";
 import { NAV_ROUTES } from "@/components/sidebar/nav-routes";
 import { COLORS } from "@/contants/colors";
 import { useRouter } from "expo-router";
@@ -11,13 +10,6 @@ export default function ShowcaseScreen() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Typography variant="h2" color={COLORS.white}>
-          UI Kit Showcase
-        </Typography>
-        <SidebarToggleButton variant="primary" type="contained" />
-      </View>
-
       <ScrollView contentContainerStyle={styles.content}>
         <Typography variant="h3" style={styles.section}>
           Welcome to the UI Kit

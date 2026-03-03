@@ -1,5 +1,6 @@
 import Button from "@/components/btn";
 import Typography from "@/components/form/Typography";
+import { NAV_ROUTES } from "@/components/sidebar/nav-routes";
 import { COLORS } from "@/contants/colors";
 import { useRouter } from "expo-router";
 import { ScrollView, StyleSheet, View } from "react-native";
@@ -8,7 +9,7 @@ export default function WelcomeScreen() {
   const router = useRouter();
 
   const handleContinue = () => {
-    router.push("/showcase");
+    router.push(NAV_ROUTES.HOME);
   };
 
   return (

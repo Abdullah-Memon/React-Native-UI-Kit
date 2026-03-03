@@ -1,6 +1,7 @@
 // Navigation routes - centralized for single source of truth
 export const NAV_ROUTES = {
-  HOME: "/",
+  WELCOME: "/",
+  HOME: "/showcase",
   BUTTONS: "/buttons",
   TYPOGRAPHY: "/typography",
 };
@@ -32,7 +33,7 @@ export const SIDEBAR_MENU = [
   },
   {
     label: "Exit",
-    route: NAV_ROUTES.HOME,
+    route: NAV_ROUTES.WELCOME,
     icon: "🚪",
     collapsible: false,
   },

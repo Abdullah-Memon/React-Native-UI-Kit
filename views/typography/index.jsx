@@ -1,18 +1,10 @@
 import Typography from "@/components/form/Typography";
-import SidebarToggleButton from "@/components/sidebar/btn";
 import { COLORS } from "@/contants/colors";
 import { ScrollView, StyleSheet, View } from "react-native";
 
 export default function TypographyShowcaseScreen() {
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Typography variant="h3" color={COLORS.white}>
-          Typography
-        </Typography>
-        <SidebarToggleButton variant="primary" type="contained" />
-      </View>
-
       <ScrollView contentContainerStyle={styles.content}>
         <Typography variant="h3" style={styles.section}>
           Heading Variants
@@ -122,15 +114,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.background,
-  },
-  header: {
-    backgroundColor: COLORS.primary,
-    paddingTop: 16,
-    paddingHorizontal: 16,
-    paddingBottom: 16,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
   },
   content: {
     padding: 16,
