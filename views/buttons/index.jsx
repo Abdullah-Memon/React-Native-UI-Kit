@@ -1,3 +1,4 @@
+import commonStyles from "@/assets/common.style";
 import Button from "@/components/btn";
 import Typography from "@/components/form/Typography";
 import { COLORS } from "@/contants/colors";
@@ -108,13 +109,13 @@ export default function ButtonsShowcaseScreen() {
         </Typography>
         <Button
           title="Custom Color (Income)"
-          color={COLORS.income}
+          color={COLORS.success}
           onPress={() => {}}
         />
         <Button
           title="Custom Color (Expense)"
           type="outlined"
-          color={COLORS.expense}
+          color={COLORS.error}
           onPress={() => {}}
           style={styles.gap}
         />
@@ -130,10 +131,7 @@ export default function ButtonsShowcaseScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.background,
-  },
+  ...commonStyles,
   header: {
     backgroundColor: COLORS.primary,
     paddingTop: 16,
@@ -143,14 +141,10 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
   },
-  content: {
-    padding: 16,
-    paddingBottom: 32,
-  },
   section: {
+    ...commonStyles.section,
     marginTop: 16,
     marginBottom: 12,
-    color: COLORS.primary,
   },
   gap: {
     marginTop: 10,

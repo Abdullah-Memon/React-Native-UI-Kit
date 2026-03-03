@@ -51,7 +51,7 @@ export default function Sidebar() {
       >
         <ScrollView contentContainerStyle={styles.content}>
           <View style={styles.header}>
-            <Typography variant="h3" color={COLORS.white}>
+            <Typography variant="h3" color={COLORS.text}>
               Menu
             </Typography>
           </View>
@@ -71,14 +71,14 @@ export default function Sidebar() {
                   </Typography>
                   <Typography
                     variant="p"
-                    color={COLORS.white}
+                    color={COLORS.text}
                     style={styles.menuLabel}
                   >
                     {item.label}
                   </Typography>
                   <Typography
                     variant="p"
-                    color={COLORS.white}
+                    color={COLORS.text}
                     style={styles.expandIcon}
                   >
                     {expandedItems[index] ? "▼" : "▶"}
@@ -99,7 +99,7 @@ export default function Sidebar() {
                         <Typography variant="p" style={styles.submenuIcon}>
                           {subitem.icon}
                         </Typography>
-                        <Typography variant="p" color={COLORS.white}>
+                        <Typography variant="p" color={COLORS.text}>
                           {subitem.label}
                         </Typography>
                       </Pressable>
@@ -119,7 +119,7 @@ export default function Sidebar() {
                 <Typography variant="p" style={styles.menuIcon}>
                   {item.icon}
                 </Typography>
-                <Typography variant="p" color={COLORS.white}>
+                <Typography variant="p" color={COLORS.text}>
                   {item.label}
                 </Typography>
               </Pressable>
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     top: 0,
     bottom: 0,
     width: 280,
-    backgroundColor: COLORS.primary,
+    backgroundColor: COLORS.sidebarBackground,
     zIndex: 100,
     shadowColor: COLORS.shadow,
     shadowOffset: { width: 2, height: 0 },
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
     paddingTop: 0,
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(255, 255, 255, 0.2)",
+    borderBottomColor: COLORS.border,
     marginBottom: 16,
   },
   menuItem: {

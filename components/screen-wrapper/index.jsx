@@ -7,10 +7,10 @@ export default function ScreenWrapper({ title, children }) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Typography variant="h3" color={COLORS.white}>
+        <SidebarToggleButton variant="primary" type="contained" size="md" />
+        <Typography variant="h4" color={COLORS.white}>
           {title}
         </Typography>
-        <SidebarToggleButton variant="primary" type="contained" />
       </View>
       <View style={styles.content}>{children}</View>
     </View>
@@ -24,11 +24,9 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: COLORS.primary,
-    paddingTop: 16,
-    paddingHorizontal: 16,
-    paddingBottom: 16,
+    padding: 12,
+    paddingLeft: 0,
     flexDirection: "row",
-    justifyContent: "space-between",
     alignItems: "center",
   },
   content: {

@@ -5,6 +5,8 @@ export const NAV_ROUTES = {
   ELEMENTS: {
     BUTTONS: "/buttons",
     TYPOGRAPHY: "/typography",
+    INPUT: "/input",
+    CARDS: "/cards",
   },
 };
 
@@ -30,6 +32,16 @@ export const SIDEBAR_MENU = [
         label: "Typography",
         route: NAV_ROUTES.ELEMENTS.TYPOGRAPHY,
         icon: "📝",
+      },
+      {
+        label: "Input",
+        route: NAV_ROUTES.ELEMENTS.INPUT,
+        icon: "⌨️",
+      },
+      {
+        label: "Cards",
+        route: NAV_ROUTES.ELEMENTS.CARDS,
+        icon: "🃏",
       },
     ],
   },

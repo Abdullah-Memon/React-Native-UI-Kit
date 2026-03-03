@@ -1,3 +1,4 @@
+import commonStyles from "@/assets/common.style";
 import Button from "@/components/btn";
 import Typography from "@/components/form/Typography";
 import { NAV_ROUTES } from "@/components/sidebar/nav-routes";
@@ -49,6 +50,24 @@ export default function ShowcaseScreen() {
 
           <View style={styles.card}>
             <Typography variant="h5" style={styles.cardTitle}>
+              ⌨️ Inputs
+            </Typography>
+            <Typography variant="span" color={COLORS.textLight}>
+              Validated text inputs with labels and icons
+            </Typography>
+          </View>
+
+          <View style={styles.card}>
+            <Typography variant="h5" style={styles.cardTitle}>
+              🃏 Cards
+            </Typography>
+            <Typography variant="span" color={COLORS.textLight}>
+              Flexible card layouts with header, content, footer
+            </Typography>
+          </View>
+
+          <View style={styles.card}>
+            <Typography variant="h5" style={styles.cardTitle}>
               🎨 Themes
             </Typography>
             <Typography variant="span" color={COLORS.textLight}>
@@ -87,13 +106,26 @@ export default function ShowcaseScreen() {
 
         <Button
           title="Explore Buttons →"
-          onPress={() => router.push(NAV_ROUTES.BUTTONS)}
+          onPress={() => router.push(NAV_ROUTES.ELEMENTS.BUTTONS)}
           size="lg"
           style={styles.exploreButton}
         />
         <Button
           title="Explore Typography →"
-          onPress={() => router.push(NAV_ROUTES.TYPOGRAPHY)}
+          onPress={() => router.push(NAV_ROUTES.ELEMENTS.TYPOGRAPHY)}
+          size="lg"
+          variant="secondary"
+          style={styles.exploreButton}
+        />
+        <Button
+          title="Explore Inputs →"
+          onPress={() => router.push(NAV_ROUTES.ELEMENTS.INPUT)}
+          size="lg"
+          style={styles.exploreButton}
+        />
+        <Button
+          title="Explore Cards →"
+          onPress={() => router.push(NAV_ROUTES.ELEMENTS.CARDS)}
           size="lg"
           variant="secondary"
           style={styles.exploreButton}
@@ -104,10 +136,7 @@ export default function ShowcaseScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.background,
-  },
+  ...commonStyles,
   header: {
     backgroundColor: COLORS.primary,
     paddingTop: 16,
@@ -116,10 +145,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-  },
-  content: {
-    padding: 16,
-    paddingBottom: 32,
   },
   section: {
     marginBottom: 12,

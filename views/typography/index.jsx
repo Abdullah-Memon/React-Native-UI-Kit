@@ -1,3 +1,4 @@
+import commonStyles from "@/assets/common.style";
 import Typography from "@/components/form/Typography";
 import { COLORS } from "@/contants/colors";
 import { ScrollView, StyleSheet, View } from "react-native";
@@ -47,17 +48,17 @@ export default function TypographyShowcaseScreen() {
           This text uses the primary theme color.
         </Typography>
 
-        <Typography variant="h4" color={COLORS.income} style={styles.gap}>
+        <Typography variant="h4" color={COLORS.success} style={styles.gap}>
           Income Color (Green)
         </Typography>
-        <Typography variant="p" color={COLORS.income} style={styles.gap}>
+        <Typography variant="p" color={COLORS.success} style={styles.gap}>
           This text indicates income, displayed in green.
         </Typography>
 
-        <Typography variant="h4" color={COLORS.expense} style={styles.gap}>
+        <Typography variant="h4" color={COLORS.error} style={styles.gap}>
           Expense Color (Red)
         </Typography>
-        <Typography variant="p" color={COLORS.expense} style={styles.gap}>
+        <Typography variant="p" color={COLORS.error} style={styles.gap}>
           This text indicates expense, displayed in red.
         </Typography>
 
@@ -99,7 +100,7 @@ export default function TypographyShowcaseScreen() {
         </Typography>
         <Typography
           variant="p"
-          color={COLORS.income}
+          color={COLORS.success}
           fontSize={16}
           style={styles.gap}
         >
@@ -111,18 +112,11 @@ export default function TypographyShowcaseScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.background,
-  },
-  content: {
-    padding: 16,
-    paddingBottom: 32,
-  },
+  ...commonStyles,
   section: {
+    ...commonStyles.section,
     marginTop: 20,
     marginBottom: 12,
-    color: COLORS.primary,
   },
   gap: {
     marginTop: 10,
